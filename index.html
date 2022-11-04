@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.scss" />
+    <link rel="stylesheet" href="https://use.typekit.net/uup5xkf.css" />
+  </head>
+  <body class="global">
+    <header class="header">
+      <nav class="header__nav nav">
+        <img
+          src="./assets/hamburger__pink.png"
+          alt="menu"
+          class="nav__hamburger"
+        />
+        <img src="./assets/image_logo.png" alt="logo" class="nav__logo" />
+      </nav>
+    </header>
+    <main class="main">
+      <div class="main__main-div main-div">
+        <img src="./assets/header_image.png" alt="" class="main-div__image" />
+        <img src="./assets/image_logo.png" alt="menu" class="main-div__logo" />
+      </div>
+      <h2 class="main__text">
+        <strong class="main__text main__text--special">Brave the Elements</strong> is
+        training the worst weather possible. It pushes you harder and makes you
+        stronger. Or you gonna get sick. To get you started, we’re sending you
+        some ice-cold words. Enter your details below to receive them. Don’t
+        melt.
+      </h2>
+
+      <div class="main__input">
+        <h3 class="input__title">ENTER HERE</h3>
+        <input
+          type="text"
+          class="input__name"
+          placeholder="your name"
+          required
+        />
+        <input
+          type="text"
+          class="input__surname"
+          placeholder="your surname"
+          required
+        />
+        <input
+          type="email"
+          class="input__email"
+          placeholder="your email"
+          required
+        />
+        <label class="input__date-label" for="input__date">
+          your date of birth
+        </label>
+        <input
+          type="date"
+          class="input__date"
+          placeholder="your date of birth"
+          required
+        />
+        <div class="input__gender gender">
+          <div class="gender__captions">
+            <div class="gender__female-container">
+              <span class="gender__text gender__text--female">female</span>
+            </div>
+            <div class="gender__male-container">
+              <span class="gender__text gender__text--male">male</span>
+            </div>
+          </div>
+
+          <input type="checkbox" class="gender__toggle" />
+          <label for="gender__toggle" class="gender__label"></label>
+        </div>
+        <div class="input__conditions conditions">
+          <div class="conditions__condition1 condition1">
+            <input type="checkbox" class="condition1__check" /><label
+              for="condition1__check"
+              class="condition1__label"
+            ></label>
+            <p class="condition1__text">
+              I have read and accept the terms & conditions
+            </p>
+          </div>
+          <div class="input__conditions conditions">
+            <div class="conditions__condition1 condition1">
+              <input type="checkbox" class="condition1__check" /><label
+                for="condition1__check"
+                class="condition1__label"
+              ></label>
+              <p class="condition1__text">
+                I have read and accept the terms & conditions
+              </p>
+            </div>
+            <div class="input__conditions conditions">
+                <div class="conditions__condition1 condition1">
+                  <input type="checkbox" class="condition1__check" /><label
+                    for="condition1__check"
+                    class="condition1__label"
+                  ></label>
+                  <p class="condition1__text">
+                    I have read and accept the terms & conditions
+                  </p>
+                </div>
+                <div class="input__conditions conditions">
+                    <div class="conditions__condition1 condition1">
+                      <input type="checkbox" class="condition1__check" /><label
+                        for="condition1__check"
+                        class="condition1__label"
+                      ></label>
+                      <p class="condition1__text">
+                        inny text
+                      </p>
+                    </div>
+          <!-- <div class="conditions__condition2 condition2">
+            <input type="checkbox" class="condition2__check" /><label
+              for="condition2__input"
+              class="condition2__label"
+            ></label>
+            <p class="condition2__text">
+              I am up for receiving news and cool offers from go mental,
+              including go mental updates, events and competitions.
+            </p>
+          </div> -->
+        </div>
+        <button class="input__button">submit</button>
+      </div>
+    </main>
+
+    <div class="info">please switch to mobile view</div>
+  </body>
+</html>
