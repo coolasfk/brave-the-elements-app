@@ -1,10 +1,9 @@
 const btn = document.querySelector(".input__button");
 const thanks = document.querySelector(".input__thank-you");
-
-btn.addEventListener("click", () => {
+btn.addEventListener("click", ()=>{
     btn.style.display = "none";
     thanks.style.display = "flex";
-    thanks.style.opacity = 1
+    thanks.style.opacity = 1;
 //   setTimeout(() => {
 //     btn.style.display = "flex";
 //     thanks.style.display = "none";
@@ -12,3 +11,5 @@ btn.addEventListener("click", () => {
 //  },
 //  4000)
 });
+
+//# sourceMappingURL=index.c36f364e.js.map
