@@ -1,0 +1,46 @@
+@use "colors" as c;
+@use "typography" as t;
+
+.forecast {
+  //   background: c.$secondary-color-2;
+  background: c.$secondary-color-2;
+  padding: 4vw 0 6vw 0;
+
+  &__forecast-wrapper,
+  .icon-wrapper {
+    display: flex;
+    justify-content: center;
+    &__temp {
+      display: flex;
+      flex-direction: vertical;
+      justify-content: center;
+      align-items: center;
+      font-size: 10vw;
+      text-justify: center;
+      text-align: center;
+      font-family: t.$font-headline;
+      font-style: normal;
+      font-weight: 200;
+      color: c.$primary-color-1;
+      color: #f06c4c;
+      color: c.$primary-color-2;
+    }
+    &__icon {
+      display: flex;
+      flex-direction: vertical;
+      justify-content: center;
+      height: 35vw;
+      margin: 0;
+    }
+  }
+}
+.weather-description {
+  font-family: t.$font-halcom;
+  display: flex;
+  flex-direction: horizontal;
+  justify-content: center;
+  text-align: center;
+  font-size: t.$font-size-2;
+  color: c.$primary-color-2;
+  margin: 0 10vw 0 10vw;
+}

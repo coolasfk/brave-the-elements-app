@@ -1,12 +1,16 @@
 @font-face {
-    font-family: "Roboto-Medium";
-    src: url(/assets/Roboto/Roboto-Medium.ttf) format('ttf');
+  font-family: "Roboto-Medium";
+  src: url(/assets/Roboto/Roboto-Medium.ttf) format("ttf");
 }
 @font-face {
-    font-family: "Feruka.otf";
-    src: url(/assets/Feruka.otf) format('otf');
+  font-family: "Feruka.otf";
+  src: url(/assets/Feruka.otf) format("otf");
 }
 
 $font-halcom: halcom, sans-serif;
 $font-roboto: Roboto-Medium, sans-serif;
 $font-feruka: Feruka, sans-serif;
+$font-headline: headline-gothic-atf, sans-serif;
+$font-size-1: 1rem;
+$font-size-2: 1.3rem;
+$font-size-3: 2rem;

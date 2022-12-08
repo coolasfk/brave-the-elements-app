@@ -1,0 +1,56 @@
+@use "colors";
+@use "typography";
+
+// $primary-color-1: #18374c;
+// $primary-color-2: #feb9c9;
+// $secondary-color-1: #d0d0d0;
+// $secondary-color-2: #90a9b9;
+
+.header-toggle {
+    background-color: "red";
+    border: 10px solid #da93a4;
+    opacity: 0.5;
+  }
+  .header {
+    width: 100vw;
+    height: auto;
+    background-color: colors.$primary-color-1;
+    &__nav,
+    .nav {
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-rows: 1fr;
+      &__hamburger, .hamburger {
+        display: grid;
+        grid-column: 3/3;
+        grid-row: 1/1;
+        height: 4rem;
+        width: auto;
+
+        //margin: 3vw;
+          margin: 2vw;
+        justify-self: center;
+
+        &__inner {
+          &::before,&::after{
+          background-color: colors.$primary-color-2;
+          }
+        background-color: colors.$primary-color-2;
+      }
+      
+     
+      }
+
+      &__logo {
+        display: grid;
+        grid-column: 1/1;
+        grid-row: 1/1;
+        height: 4rem;
+        width: auto;
+        //margin: 3vw;
+        margin: 2vw;
+        justify-self: center;
+        align-self: center;
+      }
+    }
+  }

@@ -1,0 +1,179 @@
+@use "typography" as t;
+@use "colors";
+
+.input__condition-wrapper {
+  margin: 10vw 10vw 0 10vw;
+  color: colors.$secondary-color-2;
+}
+.condition {
+  display: flex;
+  flex-direction: row;
+  color: colors.$secondary-color-2;
+  margin: 1vw 2vw 1vw 2vw;
+  &__label {
+    color: colors.$primary-color-2;
+    border: colors.$primary-color-2;
+    height: 5vw;
+    width: 5vw;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 1s cubic-bezier(0, 1.04, 1, 1);
+  }
+  &__check {
+    + .condition__label {
+      color: colors.$secondary-color-2;
+      background-color: transparent;
+      border: colors.$secondary-color-2 0.2rem solid;
+      height: 5vw;
+      width: 5vw;
+      border-radius: 1rem;
+      cursor: pointer;
+      z-index: 2;
+      margin: 0 5vw 0 0;
+      transition: all 1s cubic-bezier(0, 1.04, 1, 1);
+    }
+  }
+  &__check:checked {
+    + .condition__label {
+      background-color: colors.$secondary-color-2;
+      color: colors.$secondary-color-2;
+      height: 5vw;
+      width: 5vw;
+      border-radius: 1rem;
+      cursor: pointer;
+      z-index: 2;
+      margin: 0 5vw 0 0;
+      transition: all 1s cubic-bezier(0, 1.04, 1, 1);
+    }
+  }
+  &__check {
+    opacity: 0%;
+    position: absolute;
+    z-index: 5;
+    width: 5vw;
+    height: 5vw;
+    margin: 0 5vw 0 0;
+  }
+
+  &__text {
+    color: colors.$secondary-color-2;
+    width: 70vw;
+
+    text-align: left;
+  }
+}
+
+.gender {
+  margin: 2vw 0 2vw 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  &__male-container {
+    display: flex;
+    //transform-origin: 50% 0%;
+    color: aqua;
+    //border: 4px red solid;
+    width: 100vw;
+    justify-content: flex-start;
+    transform: translateX(60vw);
+    align-items: center;
+    align-self: center;
+    position: absolute;
+    height: 7vw;
+  }
+  &__female-container {
+    display: flex;
+    //transform-origin: 50% 0%;
+    color: aqua;
+    //border: 4px red solid;
+    width: 100vw;
+    justify-content: flex-end;
+    transform: translateX(-60vw);
+    align-items: center;
+    align-self: center;
+    position: absolute;
+    height: 7vw;
+  }
+
+  &__captions {
+    width: 100vw;
+  }
+  &__text {
+    color: colors.$primary-color-2;
+    display: flex;
+  }
+
+  &__label {
+    opacity: 1;
+    height: 20px;
+    width: 50px;
+    cursor: pointer;
+  }
+
+  &__toggle {
+    opacity: 0;
+    width: 30vw;
+    height: 10vw;
+    z-index: 10;
+    position: absolute;
+    + .gender__label {
+      background-color: transparent;
+      height: 7vw;
+      width: 15vw;
+      position: absolute;
+      display: flex;
+      border-radius: 15px;
+      opacity: 1;
+      border: colors.$primary-color-2 0.2rem solid;
+    }
+  }
+  &__toggle:checked {
+    z-index: 10;
+    opacity: 0;
+    + .gender__label {
+      background-color: transparent;
+      height: 7vw;
+      width: 15vw;
+      position: absolute;
+      display: flex;
+      border-radius: 15px;
+      opacity: 1;
+      border: colors.$primary-color-2 0.2rem solid;
+    }
+  }
+  &__toggle {
+    z-index: 10;
+    opacity: 0;
+    + .gender__label::after {
+      background-color: colors.$secondary-orange;
+      height: 4vw;
+      width: 4vw;
+      position: absolute;
+      display: flex;
+      border-radius: 1rem;
+      opacity: 1;
+      content: "";
+      translate: 0.9vw;
+      margin: 0.7vw 0 0 0;
+      transition: all 200ms ease-in-out;
+    }
+  }
+  &__toggle:checked {
+    z-index: 10;
+    opacity: 0;
+    + .gender__label::after {
+      background-color: colors.$primary-color-2;
+      background-color: colors.$secondary-orange;
+      height: 4vw;
+      width: 4vw;
+      position: absolute;
+      display: flex;
+      border-radius: 1rem;
+      opacity: 1;
+      content: "";
+      translate: 8.5vw;
+      margin: 0.7vw 0 0 0;
+      transition: all 200ms ease-in-out;
+    }
+  }
+}

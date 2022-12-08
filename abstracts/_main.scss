@@ -1,0 +1,150 @@
+@use "colors";
+@use "typography" as t;
+
+// $font-halcom: halcom, sans-serif;
+// $font-roboto: Roboto-Medium, sans-serif;
+// $font-feruka: Feruka, sans-serif;
+
+.main {
+  background-color: colors.$primary-color-2;
+  font-family: t.$font-halcom;
+  overflow: hidden;
+  width: 100vw;
+  font-family: t.$font-halcom;
+
+  &__main-wrapper,
+  .main-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    &__image {
+      width: 100vw;
+      height: auto;
+      grid-column: 1/1;
+      grid-row: 1/1;
+      z-index: 0;
+      object-fit: contain;
+    }
+    &__logo {
+      width: 50vw;
+      grid-column: 1/1;
+      grid-row: 1/1;
+      z-index: 10;
+      position: absolute;
+      margin-top: 18vw;
+      margin-left: 4vw;
+      animation: logo 10s linear infinite;
+    }
+    @keyframes logo {
+      0% {
+        translate: -50vw 0;
+      }
+      4% {
+        translate: 0 0;
+      }
+      97% {
+        translate: 50vw 0;
+      }
+      100% {
+        translate: 100vw 0;
+      }
+    }
+  }
+  &__text-div {
+    margin: 10vw 10vw 10vw 10vw;
+  }
+  &__text {
+    display: grid;
+    grid-column: 1/1;
+    grid-row: 1/1;
+    font-size: t.$font-size-2;
+    color: colors.$primary-color-1;
+    font-weight: 700;
+    text-align: center;
+    text-justify: center;
+    align-items: center;
+    align-self: center;
+    &--special {
+      font-weight: 700;
+      text-decoration-line: line-through;
+    }
+  }
+  &__input,
+  .input {
+    text-align: center;
+    max-width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: colors.$primary-color-1;
+    &__title {
+      font-family: t.$font-feruka;
+      color: colors.$primary-color-2;
+      margin: 10vw 2vw 2vw 2vw;
+      font-size: t.$font-size-3;
+    }
+    &__user {
+      margin: 2vw 10vw 2vw 10vw;
+      border: none;
+      padding: 2vw;
+      border-bottom: dashed colors.$primary-color-2 1px;
+      color: colors.$primary-color-2;
+      background-color: transparent;
+      text-align: center;
+      font-size: t.$font-size-1;
+      opacity: 1;
+    }
+
+    &__date-label {
+      margin: 2vw;
+      color: colors.$primary-color-2;
+      margin: 4vw 0 0 0;
+    }
+    &__date {
+      margin: 4vw 10vw 6vw 10vw;
+      border: none;
+      padding: 2vw;
+      background-color: colors.$secondary-color-2;
+      color: colors.$primary-color-2;
+      text-align: center;
+    }
+
+    &__gender-caption {
+      color: colors.$primary-color-2;
+      font-size: t.$font-size-1;
+      margin: 0 0 2vw 0;
+    }
+
+    &__button {
+      border: 0.5rem solid colors.$primary-color-2;
+      width: 80vw;
+      margin: 7vw 10vw 10vw 10vw;
+      padding: 2vw;
+      background-color: colors.$primary-color-1;
+      color: colors.$primary-color-2;
+      font-family: t.$font-feruka;
+      font-size: t.$font-size-2;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      //display: none;
+      transition: all 1s ease-in;
+    }
+    &__button:active {
+      scale: 95%;
+      cursor: pointer;
+      transition: all 500ms ease-out;
+    }
+    &__thank-you {
+      display: none;
+      //display: flex;
+      font-size: colors.$primary-color-2;
+      font-family: t.$font-halcom;
+      margin: 5vw 10vw 5vw 10vw;
+      justify-content: center;
+      color: colors.$primary-color-2;
+      transition: all 1s ease-in;
+      animation: opacity-change 4s ease-in;
+    }
+  }
+}

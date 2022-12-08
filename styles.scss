@@ -1,16 +1,19 @@
-@use "abstracts/typography";
+@use 'abstracts/typography' as t;
+@use 'abstracts/header';
+@use 'abstracts/colors';
+@use 'abstracts/main';
+@use 'abstracts/input';
+@use 'abstracts/forecast';
 
-$font-size-1: 1rem;
-$font-size-2: 1.3rem;
-$font-size-3: 2rem;
-$primary-color-1: #18374c;
-$primary-color-2: #feb9c9;
-$secondary-color-1: #d0d0d0;
-$secondary-color-2: #90a9b9;
-$halcom: halcom, sans-serif;
-$font-feruka: Feruka, sans-serif;
+// $font-size-1: 1rem;
+// $font-size-2: 1.3rem;
+// $font-size-3: 2rem;
+// $halcom: halcom, sans-serif;
+// $font-feruka: Feruka, sans-serif;
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -25,15 +28,15 @@ $font-feruka: Feruka, sans-serif;
   }
   .info {
     font-family: halcom, sans-serif;
-    font-size: $font-size-2;
+    font-size: t.$font-size-2;
     display: flex;
     width: 100vw;
     height: 100vw;
     align-content: center;
     align-items: center;
     justify-content: center;
-    background-color: $primary-color-2;
-    color: $primary-color-1;
+    background-color: colors.$primary-color-2;
+    color: colors.$primary-color-1;
   }
 }
 
@@ -41,365 +44,13 @@ $font-feruka: Feruka, sans-serif;
   .info {
     display: none;
   }
-  .header {
-    width: 100vw;
-    height: auto;
-    background-color: $primary-color-1;
-    &__nav,
-    .nav {
-      display: grid;
-      grid-template-columns: 1fr 3fr 1fr;
-      grid-template-rows: 1fr;
-      &__hamburger {
-        display: grid;
-        grid-column: 3/3;
-        grid-row: 1/1;
-        height: 4rem;
-        width: auto;
 
-        //margin: 3vw;
-        margin: 2vw;
-        justify-self: center;
-      }
-      &__logo {
-        display: grid;
-        grid-column: 1/1;
-        grid-row: 1/1;
-        height: 4rem;
-        width: auto;
-        //margin: 3vw;
-        margin: 2vw;
-        justify-self: center;
-        align-self: center;
-      }
-    }
-  }
-  .main {
-    background-color: $primary-color-2;
-    font-family: $halcom;
-    overflow: hidden;
-    width: 100vw;
-    font-family: $halcom;
-
-    &__main-div,
-    .main-div {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-      &__image {
-        width: 100vw;
-        height: auto;
-        grid-column: 1/1;
-        grid-row: 1/1;
-        z-index: 0;
-        object-fit: contain;
-      }
-      &__logo {
-        width: 50vw;
-        grid-column: 1/1;
-        grid-row: 1/1;
-        z-index: 10;
-        position: absolute;
-        margin-top: 18vw;
-        margin-left: 4vw;
-        animation: logo 10s linear infinite;
-      }
-      @keyframes logo {
-        0% {
-          translate: -50vw 0;
-        }
-        4% {
-          translate: 0 0;
-        }
-        97% {
-          translate: 50vw 0;
-        }
-        100% {
-          translate: 100vw 0;
-        }
-      }
-    }
-    &__text-div {
-      margin: 10vw 10vw 10vw 10vw;
-    }
-    &__text {
-      display: grid;
-      grid-column: 1/1;
-      grid-row: 1/1;
-      font-size: $font-size-2;
-      color: $primary-color-1;
-      font-weight: 700;
-      text-align: center;
-      text-justify: center;
-      align-items: center;
-      align-self: center;
-      &--special {
-        font-weight: 700;
-        text-decoration-line: line-through;
-      }
-    }
-
-    &__input,
-    .input {
-      text-align: center;
-      max-width: 100vw;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      background-color: $primary-color-1;
-      &__title {
-        font-family: $font-feruka;
-        color: $primary-color-2;
-        margin: 10vw 2vw 2vw 2vw;
-        font-size: $font-size-3;
-      }
-      &__user {
-        margin: 2vw 10vw 2vw 10vw;
-        border: none;
-        padding: 2vw;
-        border-bottom: dashed $primary-color-2 1px;
-        color: $primary-color-2;
-        background-color: transparent;
-        text-align: center;
-        font-size: $font-size-1;
-        opacity: 1;
-      }
-
-      &__date-label {
-        margin: 2vw;
-        color: $primary-color-2;
-        margin: 4vw 0 0 0;
-      }
-      &__date {
-        margin: 4vw 10vw 6vw 10vw;
-        border: none;
-        padding: 2vw;
-        background-color: #da93a4;
-        color: $primary-color-2;
-        text-align: center;
-      }
-
-      &__gender-caption {
-        color: $primary-color-2;
-        font-size: $font-size-1;
-        margin: 0 0 2vw 0;
-      }
-
-      &__button {
-        border: 0.5rem solid $primary-color-2;
-        width: 80vw;
-        margin: 7vw 10vw 10vw 10vw;
-        padding: 2vw;
-        background-color: $primary-color-1;
-        color: $primary-color-2;
-        font-family: $font-feruka;
-        font-size: $font-size-2;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        //display: none;
-        transition: all 1s ease-in;
-      }
-      &__button:active {
-        scale: 95%;
-        cursor: pointer;
-        transition: all 500ms ease-out;
-      }
-      &__thank-you {
-        display: none;
-        //display: flex;
-        font-size: $primary-color-2;
-        font-family: $halcom;
-        margin: 5vw 10vw 5vw 10vw;
-        justify-content: center;
-        color: $primary-color-2;
-        transition: all 1s ease-in;
-        animation: opacity-change 4s ease-in;
-      }
-      // @keyframes opacity-change {
-      //   0% {
-      //     opacity: 1;
-      //   }
-      //   100% {
-      //     opacity: 0;
-      //   }
-      // }
-    }
-  }
-}
-
-.input__condition-wrapper {
-  margin: 10vw 10vw 0 10vw;
-  color: $secondary-color-2;
-}
-.condition {
-  display: flex;
-  flex-direction: row;
-  color: $secondary-color-2;
-  margin: 1vw 2vw 1vw 2vw;
-  &__label {
-    color: $primary-color-2;
-    border: $primary-color-2;
-    height: 5vw;
-    width: 5vw;
-    border-radius: 1rem;
-    cursor: pointer;
-    transition: all 1s cubic-bezier(0, 1.04, 1, 1);
-  }
-  &__check {
-    + .condition__label {
-      color: $secondary-color-2;
-      background-color: transparent;
-      border: $secondary-color-2 0.2rem solid;
-      height: 5vw;
-      width: 5vw;
-      border-radius: 1rem;
-      cursor: pointer;
-      z-index: 2;
-      margin: 0 5vw 0 0;
-      transition: all 1s cubic-bezier(0, 1.04, 1, 1);
-    }
-  }
-  &__check:checked {
-    + .condition__label {
-      background-color: $secondary-color-2;
-      color: $secondary-color-2;
-      height: 5vw;
-      width: 5vw;
-      border-radius: 1rem;
-      cursor: pointer;
-      z-index: 2;
-      margin: 0 5vw 0 0;
-      transition: all 1s cubic-bezier(0, 1.04, 1, 1);
-    }
-  }
-  &__check {
-    opacity: 0%;
-    position: absolute;
-    z-index: 5;
-    width: 5vw;
-    height: 5vw;
-    margin: 0 5vw 0 0;
-  }
-
-  &__text {
-    color: $secondary-color-2;
-    width: 70vw;
-
-    text-align: left;
-  }
-}
-
-.gender {
-  margin: 2vw 0 2vw 0;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  &__male-container {
-    display: flex;
-    //transform-origin: 50% 0%;
-    color: aqua;
-    //border: 4px red solid;
-    width: 100vw;
-    justify-content: flex-start;
-    transform: translateX(60vw);
-    align-items: center;
-    align-self: center;
-    position: absolute;
-    height: 7vw;
-  }
-  &__female-container {
-    display: flex;
-    //transform-origin: 50% 0%;
-    color: aqua;
-    //border: 4px red solid;
-    width: 100vw;
-    justify-content: flex-end;
-    transform: translateX(-60vw);
-    align-items: center;
-    align-self: center;
-    position: absolute;
-    height: 7vw;
-  }
-
-  &__captions {
-    width: 100vw;
-  }
-  &__text {
-    color: $primary-color-2;
-    display: flex;
-  }
-
-  &__label {
-    opacity: 1;
-    height: 20px;
-    width: 50px;
-    cursor: pointer;
-  }
-
-  &__toggle {
-    opacity: 0;
-    width: 30vw;
-    height: 10vw;
-    z-index: 10;
-    position: absolute;
-    + .gender__label {
-      background-color: transparent;
-      height: 7vw;
-      width: 15vw;
-      position: absolute;
-      display: flex;
-      border-radius: 15px;
-      opacity: 1;
-      border: $primary-color-2 0.2rem solid;
-    }
-  }
-  &__toggle:checked {
-    z-index: 10;
-    opacity: 0;
-    + .gender__label {
-      background-color: transparent;
-      height: 7vw;
-      width: 15vw;
-      position: absolute;
-      display: flex;
-      border-radius: 15px;
-      opacity: 1;
-      border: $primary-color-2 0.2rem solid;
-    }
-  }
-  &__toggle {
-    z-index: 10;
-    opacity: 0;
-    + .gender__label::after {
-      background-color: $primary-color-2;
-      height: 4vw;
-      width: 4vw;
-      position: absolute;
-      display: flex;
-      border-radius: 1rem;
-      opacity: 1;
-      content: "";
-      translate: 0.9vw;
-      margin: 0.7vw 0 0 0;
-      transition: all 200ms ease-in-out;
-    }
-  }
-  &__toggle:checked {
-    z-index: 10;
-    opacity: 0;
-    + .gender__label::after {
-      background-color: $primary-color-2;
-      height: 4vw;
-      width: 4vw;
-      position: absolute;
-      display: flex;
-      border-radius: 1rem;
-      opacity: 1;
-      content: "";
-      translate: 8.5vw;
-      margin: 0.7vw 0 0 0;
-      transition: all 200ms ease-in-out;
-    }
-  }
+  // @keyframes opacity-change {
+  //   0% {
+  //     opacity: 1;
+  //   }
+  //   100% {
+  //     opacity: 0;
+  //   }
+  // }
 }
