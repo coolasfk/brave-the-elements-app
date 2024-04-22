@@ -152,18 +152,17 @@
   align-content: center;
   align-items: center;
   margin: 4vw 0 0;
-  padding: 4vw 18vw;
 }
 
 .main__input__date, .main .input__date {
   color: #c1e8dc;
   text-align: center;
   background-color: #759095;
-  border: 2px solid #325156;
+  border: 3vw solid #759095;
   align-self: center;
   align-items: center;
   margin: 6vw 2vw;
-  padding: 4vw 18vw;
+  padding: 4vw 20vw;
 }
 
 .main__input__gender-caption, .main .input__gender-caption {
