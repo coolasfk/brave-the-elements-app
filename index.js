@@ -37,7 +37,7 @@ function addWeather(position) {
     (temp = Math.round(position.main.temp)),
     (weatherTemp.textContent = `${temp}°C`),
     console.log(position),
-    (weatherIcon.src = `http://openweathermap.org/img/wn/${position.weather[0].icon}@2x.png`);
+    (weatherIcon.src = `https://openweathermap.org/img/wn/${position.weather[0].icon}@2x.png`);
 }
 // function convertK(kelvin) =>
 
