@@ -1,3 +1,10 @@
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
 .hamburger {
   cursor: pointer;
   font: inherit;
@@ -36,10 +43,10 @@
 }
 
 .hamburger-inner, .hamburger-inner:before, .hamburger-inner:after {
-  width: 40px;
-  height: 4px;
   background-color: #000;
   border-radius: 4px;
+  width: 40px;
+  height: 4px;
   transition-property: transform;
   transition-duration: 2s;
   transition-timing-function: ease;
@@ -885,5 +892,4 @@
   bottom: 0;
   transform: rotate(-90deg);
 }
-
 /*# sourceMappingURL=index.0a662173.css.map */

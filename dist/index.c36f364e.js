@@ -24,7 +24,9 @@ function error() {
     console.log("error");
 }
 function addWeather(position) {
-    weatherDescription.textContent = `The weather today in ${position.name} is:  \r\n ${position.weather[0].description}`, temp = Math.round(position.main.temp), weatherTemp.textContent = `${temp}°C`, console.log(position), weatherIcon.src = `http://openweathermap.org/img/wn/${position.weather[0].icon}@2x.png`;
+    weatherDescription.textContent = `The weather today in ${position.name} is:  \r\n ${position.weather[0].description}`, // (a = `${position.main.temp}`),
+    // (b = Math.round(a - 273.15)),
+    temp = Math.round(position.main.temp), weatherTemp.textContent = `${temp}\xb0C`, console.log(position), weatherIcon.src = `http://openweathermap.org/img/wn/${position.weather[0].icon}@2x.png`;
 }
 // function convertK(kelvin) =>
 let getWeather = navigator.geolocation.getCurrentPosition((position)=>{
