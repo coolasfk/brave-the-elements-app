@@ -100,12 +100,13 @@
       margin: 2vw;
       color: colors.$primary-color-2;
       margin: 4vw 0 0 0;
+      padding: 4vw 18vw 4vw 18vw;
       align-items: center;
       align-content: center;
     }
     &__date {
       margin: 6vw 2vw 6vw 2vw;
-      border: none;
+      border: 2px solid colors.$primary-color-1;;
       padding: 4vw 18vw 4vw 18vw;
       background-color: colors.$secondary-color-2;
       color: colors.$primary-color-2;
